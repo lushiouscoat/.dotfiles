@@ -18,4 +18,4 @@
       modules = [ ./home-manager/home.nix ];
     };
   };
-};
+}
