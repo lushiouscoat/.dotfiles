@@ -17,7 +17,8 @@
       user = {
         name = "lushiouscoat";
         email = "fricodelka71@gmail.com";
-      };    };
+      };    
+    };
   };
   programs.alacritty = {
     enable = true;
@@ -34,7 +35,8 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAliases = {      sysrebuild = "sudo nixos-rebuild switch --flake ./#nixos";
+    shellAliases = {
+      sysrebuild = "sudo nixos-rebuild switch --flake ./#nixos";
       homerebuild = "home-manager switch";
     };
   };
