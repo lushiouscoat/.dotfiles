@@ -1,5 +1,5 @@
 {
-  description = "My flake"; 
+  description = "MY flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -14,16 +14,12 @@
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
-      modules = [ 
-	./system/configuration.nix
-	home-manager.nixosModules.home-manager
-	{
-	  home-manager.useGlobalPkgs = true;
-	  home-manager.useUserPackages = true;
-	  home-manager.users.lushious = import ./home-manager/home.nix;
-	}
-      ];
+      modules = [ ./system/configuration.nix ];
+    };
+
+    homeConfigurations."lushious@nixos" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      modules = [ ./home-manager/home.nix ];
     };
   };
 }
-
