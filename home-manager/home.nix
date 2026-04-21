@@ -15,7 +15,6 @@
     neovim
   ];
 
-  programs.home-manager.enable = true;
 
   programs.git = {
     enable = true;
@@ -49,5 +48,6 @@
     };
   };
 
+  programs.home-manager.enable = true;
   home.stateVersion = "25.11";
 }
