@@ -19,8 +19,12 @@
 
   programs.git = {
     enable = true;
-    userName = "lushiouscoat";
-    userEmail = "fricodelka71@gmail.com";
+    settings = {
+      user = {
+        name = "lushiouscoat";        
+        email = "fricodelka71@gmail.com";
+      };
+    };
   };
 
   programs.alacritty = {
