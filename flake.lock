@@ -60,7 +60,24 @@
       "inputs": {
         "disko": "disko",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "zapret": "zapret"
+      }
+    },
+    "zapret": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776884711,
+        "narHash": "sha256-450iqdDgCYkxLcMvpW3cfcRixLJkzibXGG75N65I+Vc=",
+        "owner": "Sergeydigl3",
+        "repo": "zapret-discord-youtube-linux",
+        "rev": "322e66a97535505a0c16fee0f466f13dae8457e6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Sergeydigl3",
+        "repo": "zapret-discord-youtube-linux",
+        "type": "github"
       }
     }
   },
