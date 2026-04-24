@@ -41,8 +41,8 @@
     enableCompletion = true;
     shellAliases = {
 
-      sysrebuild = "sudo nixos-rebuild switch --flake ./#nixos";
-      homerebuild = "home-manager switch";
+      sysrb= "sudo nixos-rebuild switch --flake ./#nixos";
+      hmrb= "home-manager switch";
     };
   };
   programs.home-manager.enable = true;
