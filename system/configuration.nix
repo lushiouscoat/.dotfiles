@@ -110,6 +110,30 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  systemd.services.zapret-custom = {
+    description = "Zapret bypass service";
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+    wantedBy = [ "multi-user.target" ];
+
+    serviceConfig = {
+      Type = "simple";
+      WorkingDirectory = "/home/lushious/zapret-discord-youtube-linux";
+      ExecStart = "${pkgs.bash}/bin/bash ./service.sh run -s general_alt10.bat -i any";
+      Restart = "on-failure";
+      User = "root";
+    };
+    
+    path = with pkgs; [ 
+      bash 
+      iptables 
+      nftables 
+      gawk 
+      iproute2 
+      curl 
+    ];
+  };
+
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
