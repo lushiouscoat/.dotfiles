@@ -11,6 +11,7 @@
   ];
   programs.git = {
     enable = true;
+    signing.format = null;
     settings.user = {
       name = "lushiouscoat";
       email = "fricodelka71@gmail.com";
