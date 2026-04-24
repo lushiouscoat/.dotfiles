@@ -10,7 +10,8 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     
     zapret.url = "github:Sergeydigl3/zapret-discord-youtube-linux";
-  };
+    zapret.flake = false;
+};
 
   outputs = inputs@{ nixpkgs, home-manager, zapret, disko, ... }: {
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
