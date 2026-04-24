@@ -131,6 +131,7 @@
       gawk 
       iproute2 
       curl 
+      git
     ];
   };
 
