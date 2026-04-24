@@ -2,7 +2,12 @@
   home.username = "lushious";
   home.homeDirectory = "/home/lushious";
   home.packages = with pkgs; [
-    fastfetch htop zip unzip neovim
+    fastfetch
+    htop
+    zip
+    unzip
+    neovim
+    alsa-utils
   ];
   programs.git = {
     enable = true;
