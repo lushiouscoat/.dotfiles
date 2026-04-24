@@ -7,6 +7,7 @@
     zip
     unzip
     neovim
+    clash-verge-rev
     alsa-utils
   ];
   programs.git = {
