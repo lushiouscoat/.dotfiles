@@ -9,6 +9,7 @@
     neovim
     clash-verge-rev
     alsa-utils
+    nftables
   ];
 
   programs.git = {
