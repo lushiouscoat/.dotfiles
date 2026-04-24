@@ -9,10 +9,8 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     
-    zapret = {
-      url = "github:Sergeydigl3/zapret-discord-youtube-linux";
-      flake = false;
-    };
+    zapret.url = "github:Sergeydigl3/zapret-discord-youtube-linux";
+    zapret.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, zapret, disko, ... }: {
