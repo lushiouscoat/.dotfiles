@@ -10,11 +10,6 @@
     clash-verge-rev
     alsa-utils
   ];
-  home.file."zapret-scripts" = {
-    source = zapret;
-    recursive = true;
-  };
-  home.sessionPath = [ "$HOME/zapret-scripts" ];
 
   programs.git = {
     enable = true;

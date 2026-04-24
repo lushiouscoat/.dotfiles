@@ -8,12 +8,9 @@
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
-    
-    zapret.url = "github:Sergeydigl3/zapret-discord-youtube-linux";
-    zapret.flake = false;
 };
 
-  outputs = inputs@{ nixpkgs, home-manager, zapret, disko, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, disko, ... }: {
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
