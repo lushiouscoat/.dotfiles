@@ -3,6 +3,7 @@
   home.homeDirectory = "/home/lushious";
   home.packages = with pkgs; [
     fastfetch
+    cowsay
     htop
     zip
     unzip
@@ -10,6 +11,8 @@
     clash-verge-rev
     alsa-utils
     nftables
+    steam
+    arduino-ide
   ];
 
   programs.git = {
