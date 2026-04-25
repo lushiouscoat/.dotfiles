@@ -12,7 +12,6 @@
 
   outputs = inputs@{ nixpkgs, home-manager, disko, ... }: {
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-      allowUnfree = true;
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [ ./system/configuration.nix ];
