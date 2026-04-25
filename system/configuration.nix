@@ -81,7 +81,7 @@
    # wget
  ];
 
-  environment.variables.EDITOR = "vim";
+  environment.variables.EDITOR = "nvim";
 
   services.gnome.gnome-keyring.enable = true;
 
