@@ -1,6 +1,8 @@
 { config, pkgs, ... }: {
   home.username = "lushious";
   home.homeDirectory = "/home/lushious";
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = (_: true);
   home.packages = with pkgs; [
     fastfetch
     cowsay
