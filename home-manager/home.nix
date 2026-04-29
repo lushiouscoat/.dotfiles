@@ -6,7 +6,6 @@
   home.packages = with pkgs; [
     fastfetch
     cowsay
-    htop
     zip
     unzip
     neovim
@@ -16,6 +15,10 @@
     steam
     arduino-ide
     nautilus
+    bastet
+    nsnake
+    btop
+    pokete
   ];
 
   programs.git = {
