@@ -18,6 +18,7 @@
     bastet
     nsnake
     btop
+    aseprite
     pokete
   ];
 
