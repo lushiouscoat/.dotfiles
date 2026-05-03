@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   imports = {
-    inherit ./programs
-    inherit ./core.nix
+    inherit /programs
+    inherit /core.nix
 }
