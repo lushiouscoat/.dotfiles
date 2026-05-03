@@ -4,7 +4,6 @@
     pwvucontrol
   ];
 
-  services.rtkit.enable = true;
   services.pipewire = {
     enable = true;
   };
