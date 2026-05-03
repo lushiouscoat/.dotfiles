@@ -6,12 +6,13 @@
     helium.url = "github:FKouhai/helium2nix/main";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    hyprland.url = "github:hyprwm/Hyprland";
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, disko, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, disko, hyprland, ... }: {
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -21,7 +22,16 @@
     homeConfigurations."lushious@nixos" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       extraSpecialArgs = { inherit inputs; };
-      modules = [ ./home-manager/home.nix ];
+      modules = [
+        ./home-manager/home.nix 
+	{
+          wayland.windowManager.hyprland = {
+            enable = true;
+            package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+            portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+          };
+	}
+      ];
     };
   };
 }
