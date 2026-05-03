@@ -3,8 +3,4 @@
     coppwr
     pwvucontrol
   ];
-
-  services.pipewire = {
-    enable = true;
-  };
 }

@@ -49,8 +49,14 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  services.pipewire.systemWide = true;
-  services.pipewire.pulse.enable = true;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true; # if not already enabled
+    systemWide = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -77,7 +83,6 @@
     mako
     git
     mesa
-    inputs.helium.defaultPackage.${system}
   # wget
  ];
 
