@@ -12,7 +12,7 @@
 #	   style = "Regular";
 #	 };
 #      };
-    }:
+    };
 #    theme = "theme";
   };
 }
