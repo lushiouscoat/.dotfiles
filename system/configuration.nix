@@ -49,10 +49,8 @@
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
+  services.pipewire.systemWide = true;
+  services.pipewire.pulse.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -60,7 +58,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lushious = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkManager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "input" "networkManager" "pipewire" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -82,9 +80,11 @@
   # wget
  ];
 
-  environment.variables.EDITOR = "nvim";
+  environment.variables.EDITOR = "vim";
 
   services.gnome.gnome-keyring.enable = true;
+
+  security.polkit.enable = true;
 
   programs.sway = {
     enable = true;

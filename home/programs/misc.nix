@@ -1,0 +1,15 @@
+{ config, pkgs, ... }: {
+  home.packages = with pkgs; [
+    zip
+    unzip
+  ];
+
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+    shellAliases = {
+      sysrb= "sudo nixos-rebuild switch --flake .#nixos";
+      hmrb= "home-manager switch --flake .#lushious@nixos";
+    };
+  };
+}
