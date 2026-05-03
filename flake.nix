@@ -27,8 +27,8 @@
 	{
           wayland.windowManager.hyprland = {
             enable = true;
-            package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-            portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+            package = inputs.hyprland.packages.x86_64-linux.hyprland;
+            portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
           };
 	}
       ];
