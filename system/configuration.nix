@@ -77,6 +77,7 @@
     mako
     git
     mesa
+    inputs.helium.defaultPackage.${system}
   # wget
  ];
 
