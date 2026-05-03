@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  imports = {
-    inherit programs
-    inherit core.nix
+{ pkgs, ... }: 
+
+{
+  imports =
+  [
+    ./programs
+    ./core.nix
+  ];
 }
