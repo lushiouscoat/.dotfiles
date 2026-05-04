@@ -5,7 +5,7 @@
     pkgs.swww
     pkgs.waybar
     pkgs.libnotify
-    pkgs.rofi-wayland
+    pkgs.rofi
     pkgs.mako
     pkgs.wl-clipboard
     pkgs.alacritty
@@ -23,7 +23,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland.enable = true;
     settings = {};
   };
 }
