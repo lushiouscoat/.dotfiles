@@ -2,13 +2,13 @@
 
 {
   home.packages = [
-    swww
-    waybar
-    libnotify
-    rofi-wayland
-    mako
-    wl-clipboard
-    alacritty
+    pkgs.swww
+    pkgs.waybar
+    pkgs.libnotify
+    pkgs.rofi-wayland
+    pkgs.mako
+    pkgs.wl-clipboard
+    pkgs.alacritty
   ];
 
   programs.alacritty = {
