@@ -2,7 +2,7 @@
 
 {
   home.packages = [
-    pkgs.swww
+    pkgs.awww
     pkgs.waybar
     pkgs.libnotify
     pkgs.rofi
