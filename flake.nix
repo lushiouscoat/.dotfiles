@@ -16,7 +16,16 @@
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
-      modules = [ ./system/configuration.nix ];
+      modules = [
+        ./system/configuration.nix
+	{
+          programs.hyprland = {
+            enable = true;
+            package = inputs.hyprland.packages.x86_64-linux.hyprland;
+            portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
+          };
+	}
+      ];
     };
 
     homeConfigurations."lushious@nixos" = home-manager.lib.homeManagerConfiguration {
