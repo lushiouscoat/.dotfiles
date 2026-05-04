@@ -3,14 +3,19 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    helium.url = "github:FKouhai/helium2nix/main";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland.url = "github:hyprwm/Hyprland";
-    quickshell.url = "github:outfoxxed/quickshell";
-
-    disko.url = "github:nix-community/disko";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, disko, hyprland, quickshell, ... }: {
@@ -26,13 +31,6 @@
             portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
           };
 	}
-	
-	({ pkgs, ... }: {
-	  environment.systemPackages = [
-	    quickshell.packages.${pkgs.system}.default
-	  ];
-	})
-
       ];
     };
 
