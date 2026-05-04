@@ -10,14 +10,12 @@
     wl-clipboard
     alacritty
 
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      window = {
-        opacity = 0.9;
-      };
-#    theme = "theme";
+  programs.alacritty.enable = true;
+  programs.alacritty.settings = {
+    window = {
+      opacity = 0.9;
     };
+#    theme = "theme";
   };
 
   wayland.windowManager.hyprland = {
