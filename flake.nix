@@ -7,12 +7,13 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     hyprland.url = "github:hyprwm/Hyprland";
+    quickshell.url = "github:outfoxxed/quickshell";
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, disko, hyprland, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, disko, hyprland, quickshell, ... }: {
     nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -25,6 +26,13 @@
             portalPackage = inputs.hyprland.packages.x86_64-linux.xdg-desktop-portal-hyprland;
           };
 	}
+	
+	({ pkgs, ... }: {
+	  environment.systemPackages = [
+	    quickshell.packages.${pkgs.system}.default
+	  ];
+	})
+
       ];
     };
 

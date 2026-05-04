@@ -3,7 +3,6 @@
 {
   home.packages = [
     pkgs.awww
-    pkgs.waybar
     pkgs.libnotify
     pkgs.rofi
     pkgs.mako
