@@ -38,7 +38,7 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       extraSpecialArgs = { inherit inputs; };
       modules = [
-        ./home-manager/home.nix 
+        ./home/home.nix 
 	{
           wayland.windowManager.hyprland = {
             enable = true;

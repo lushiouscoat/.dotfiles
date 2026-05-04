@@ -1,7 +1,7 @@
 { config, pkgs, ... }: 
 
 {
-  home.packages = with pkgs [
+  home.packages = with pkgs; [
     awww
     libnotify
     rofi
