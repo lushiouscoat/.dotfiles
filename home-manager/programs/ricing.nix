@@ -9,6 +9,7 @@
     pkgs.mako
     pkgs.wl-clipboard
     pkgs.alacritty
+    pkgs.kitty
   ];
 
   programs.alacritty = {
