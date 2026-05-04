@@ -9,8 +9,8 @@
     enable = true;
     enableCompletion = true;
     shellAliases = {
-      sysrb= "sudo nixos-rebuild switch --flake .#nixos";
-      hmrb= "home-manager switch --flake .#lushious@nixos";
+      nrs= "sudo nixos-rebuild switch --flake .#nixos";
+      hms= "home-manager switch --flake .#lushious@nixos";
     };
   };
 }

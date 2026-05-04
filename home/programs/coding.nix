@@ -12,4 +12,9 @@
       email = "fricodelka71@gmail.com";
     };
   };
+  programs.neovim.extraConfig = ''
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
+  '';
 }
