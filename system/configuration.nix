@@ -57,6 +57,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -71,7 +72,6 @@
     ];
   };
 
-  programs.firefox.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -79,9 +79,6 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     vim
-    alacritty
-    wl-clipboard
-    mako
     git
     mesa
   # wget
@@ -98,6 +95,7 @@
     wrapperFeatures.gtk = true;
   };
 
+  programs.firefox.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

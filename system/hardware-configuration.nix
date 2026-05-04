@@ -13,8 +13,9 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  hardware.opengl = {
-    enable = true;
+  hardware = {
+    opengl.enable = true;
+    nvidia.modesetting.enable = true;
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
