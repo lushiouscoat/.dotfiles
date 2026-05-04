@@ -1,13 +1,14 @@
 { config, pkgs, ... }: 
 
 {
-  home.packages = [
-    pkgs.awww
-    pkgs.libnotify
-    pkgs.rofi
-    pkgs.mako
-    pkgs.wl-clipboard
-    pkgs.alacritty
+  home.packages = with pkgs [
+    awww
+    libnotify
+    rofi
+    mako
+    wl-clipboard
+    alacritty
+    quickshell
   ];
 
   programs.alacritty = {
