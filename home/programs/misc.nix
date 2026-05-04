@@ -3,6 +3,7 @@
     zip
     unzip
     nautilus
+    home-manager
   ];
 
   programs.bash = {
@@ -13,4 +14,5 @@
       hms= "home-manager switch --flake .#lushious@nixos";
     };
   };
+  programs.home-manager.enable = true;
 }
