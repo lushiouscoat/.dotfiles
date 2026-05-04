@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       inputs.disko.nixosModules.default
       ./disko.nix
+      ./nixos
     ];
 
   # Use the systemd-boot EFI boot loader.
