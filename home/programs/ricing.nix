@@ -9,6 +9,7 @@
     wl-clipboard
     alacritty
     quickshell
+    hyprland
   ];
 
   programs.alacritty = {
@@ -19,10 +20,5 @@
       };
 #      theme = "theme";
     };
-  };
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    settings = {};
   };
 }
