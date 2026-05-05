@@ -3,6 +3,7 @@
     zip
     unzip
     nautilus
+    home-manager
   ];
 
   programs.bash = {
