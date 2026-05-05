@@ -81,6 +81,7 @@
     vim
     git
     mesa
+    inputs.helium.packages.${system}.default
   # wget
  ];
 
