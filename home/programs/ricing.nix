@@ -18,7 +18,7 @@
       window = {
         opacity = 0.9;
       };
-#      theme = "theme";
+      theme = "alacritty_0_12";
     };
   };
 }
