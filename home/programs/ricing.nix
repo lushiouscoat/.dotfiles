@@ -18,7 +18,11 @@
       window = {
         opacity = 0.9;
       };
-      theme = "alacritty_0_12";
     };
+  };
+
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
   };
 }
