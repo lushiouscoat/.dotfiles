@@ -16,7 +16,7 @@
     enable = true;
     settings = {
       window = {
-        opacity = 0.9;
+        opacity = lib.mkForce 0.9;
       };
     };
   };
